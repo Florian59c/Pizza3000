@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Pizza from './components/Pizza';
+import Cart from './components/Cart';
 import piz1 from "./img/4-fromages.jpg";
 import piz2 from "./img/marguerita.jpg";
 import piz3 from "./img/pepperoni.jpg";
@@ -8,7 +9,7 @@ import './App.css';
 import './index.css';
 
 
-function App  ()  {
+const App =  () => {
 
   const [pizzas, setPizzas] = useState([
     {
@@ -37,6 +38,20 @@ function App  ()  {
 
     },
   ]);
+  const [cart, setCart] = useState({
+    items: [],
+    total: 0
+  })
+
+  const addToCart = (pizza) => {
+    const item ={...pizza};
+    item.id = `${item.id}-${Date.now()};`
+
+    setCart({
+      items: [...cart.items, item],
+      total: cart.total + pizza.price
+    });
+  }
 
 
   const listPizzas = pizzas.map(pizza => {
@@ -46,15 +61,19 @@ function App  ()  {
         name={pizza.name}
         price={pizza.price}
         image={pizza.picture}
-      // action={() => addToCart(pizza)}
+       action={() => addToCart(pizza)}
       />
     )
   })
 
   return (
-    <div className="App">
-      <div>
+    <div className="App-pizza">
         {listPizzas}
+      <div className="App-cart">
+        <Cart
+        items={cart.items}
+        total={cart.total}
+        />
       </div>
     </div>
   );
