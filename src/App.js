@@ -1,3 +1,5 @@
+import Header from './components/Header';
+// import { useState } from 'react';
 import { useState } from 'react';
 import Pizza from './components/Pizza';
 import Cart from './components/Cart';

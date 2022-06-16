@@ -1,5 +1,6 @@
 import React from "react";
-import App from "./App"
+import App from "./App";
+import NotFound from "./components/NotFound";
 import {
   BrowserRouter,
   Routes,
@@ -10,13 +11,13 @@ const Root = () => {
     return (
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" />
+          <Route path="*" element={<NotFound/>}/>
+          <Route exact path="/" element={<App/>} />
           {/* /: pour dire la suite de l'url dans le paramètre */}
           {/* <Route path="" component={}/> */}
           <Route />
           {/* <Route path="/company/:name" component={MovieCompanies} /> */}
           {/* Si aucune url trouvé */}
-          <Route component={NotFound}/>
   
         </Routes>
       </BrowserRouter>
