@@ -1,26 +1,60 @@
 import { useState } from 'react';
-
+import Pizza from './components/Pizza';
+import piz1 from "./img/4-fromages.jpg";
+import piz2 from "./img/marguerita.jpg";
+import piz3 from "./img/pepperoni.jpg";
+import piz4 from "./img/reine.jpg";
 import './App.css';
+
 
 function App() {
 
-  const [pizzas,setPizzas] =useState([]);
+  const [pizzas, setPizzas] = useState([
+    {
+      id: 1,
+      name: "4 Fromages",
+      price: 9.80,
+      picture: piz1
+    },
+    {
+      id: 2,
+      name: "Marguerita",
+      price: 7.90,
+      picture: piz2
+    },
+    {
+      id: 3,
+      name: "Pepperoni",
+      price: 8.80,
+      picture: piz3
+    },
+    {
+      id: 4,
+      name: "Reine",
+      price: 10.50,
+      picture: piz4
+
+    },
+  ]);
+
+
+  const listPizzas = pizzas.map(pizza => {
+    return (
+      <Pizza
+        key={pizza.id}
+        name={pizza.name}
+        price={pizza.price}
+        image={pizza.picture}
+      // action={() => addToCart(pizza)}
+      />
+    )
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        {listPizzas}
+      </div>
     </div>
   );
 }
