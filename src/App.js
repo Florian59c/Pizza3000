@@ -5,9 +5,10 @@ import piz2 from "./img/marguerita.jpg";
 import piz3 from "./img/pepperoni.jpg";
 import piz4 from "./img/reine.jpg";
 import './App.css';
+import './index.css';
 
 
-function App() {
+function App  ()  {
 
   const [pizzas, setPizzas] = useState([
     {
