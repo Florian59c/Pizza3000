@@ -9,7 +9,7 @@ import './App.css';
 import './index.css';
 
 
-const App =  () => {
+const App = () => {
 
   const [pizzas, setPizzas] = useState([
     {
@@ -40,16 +40,21 @@ const App =  () => {
   ]);
   const [cart, setCart] = useState({
     items: [],
-    total: 0
+    id: Date.now(),
+    total: 0,
+    count:0
   })
 
   const addToCart = (pizza) => {
-    const item ={...pizza};
-    item.id = `${item.id}-${Date.now()};`
+    const item = { ...pizza };
+    // item.id = `${item.id}-${Date.now()};`
 
     setCart({
       items: [...cart.items, item],
-      total: cart.total + pizza.price
+      total: Math.round((cart.total + pizza.price) * 100 / 100),
+      id: cart.id,
+      count:cart.count+1
+      
     });
   }
 
@@ -61,18 +66,20 @@ const App =  () => {
         name={pizza.name}
         price={pizza.price}
         image={pizza.picture}
-       action={() => addToCart(pizza)}
+        action={() => addToCart(pizza)}
       />
     )
   })
 
   return (
     <div className="App-pizza">
-        {listPizzas}
+      {listPizzas}
       <div className="App-cart">
         <Cart
-        items={cart.items}
-        total={cart.total}
+          id={cart.id}
+          items={cart.items}
+          total={cart.total}
+          count={cart.count}
         />
       </div>
     </div>
