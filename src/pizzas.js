@@ -1,7 +1,7 @@
-import piz1 from "./img/4-fromages.png"
-import piz2 from "./img/marguerita.png"
-import piz3 from "./img/pepperoni.png"
-import piz4 from "./img/reine.png"
+import piz1 from "./src/img/4-fromages.png"
+import piz2 from "./src/img/marguerita.png"
+import piz3 from "./src/img/pepperoni.png"
+import piz4 from "./src/img/reine.png"
 
 const pizzas = [
     {

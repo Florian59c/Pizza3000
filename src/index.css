@@ -51,3 +51,14 @@ code {
   margin-bottom: 0;
   font-weight: normal;
 }
+
+.App-pizza{
+  background-color: rgba(255, 0, 0, 0.377);
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.App-cart-total{
+  background-color: rgba(0, 0, 255, 0.305);
+  font-size: 3rem;
+}
