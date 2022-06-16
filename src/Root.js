@@ -16,7 +16,7 @@ const Root = () => {
           <Route />
           {/* <Route path="/company/:name" component={MovieCompanies} /> */}
           {/* Si aucune url trouvé */}
-          {/* <Route component={NotFound}/> */}
+          <Route component={NotFound}/>
   
         </Routes>
       </BrowserRouter>
