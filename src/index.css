@@ -22,3 +22,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  padding: 3rem 2rem;
+}
+
+.header {
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 1rem;
+}
+
+.header .fleche-retour {
+  display: none;
+}
+
+.header div {
+  align-items: center;
+}
+
+.header img {
+  width: 100%;
+  max-width: 10rem;
+}
+
+.header h1 {
+  color: rgb(68, 68, 68);
+  font-size: 6rem;
+  margin-bottom: 0;
+  font-weight: normal;
+}
