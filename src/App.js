@@ -47,16 +47,21 @@ const App = () => {
   ]);
   const [cart, setCart] = useState({
     items: [],
-    total: 0
+    id: Date.now(),
+    total: 0,
+    count:0
   })
 
   const addToCart = (pizza) => {
     const item = { ...pizza };
-    item.id = `${item.id}-${Date.now()};`
+    // item.id = `${item.id}-${Date.now()};`
 
     setCart({
       items: [...cart.items, item],
-      total: cart.total + pizza.price
+      total: Math.round((cart.total + pizza.price) * 100 / 100),
+      id: cart.id,
+      count:cart.count+1
+      
     });
   }
 
@@ -152,15 +157,18 @@ const App = () => {
       </div>
 
 
-      <div className="App-pizza">
-        {listPizzas}
-        <div className="App-cart">
-          <Cart
-            items={cart.items}
-            total={cart.total}
-          />
-        </div>
+
+    <div className="App-pizza">
+      {listPizzas}
+      <div className="App-cart">
+        <Cart
+          id={cart.id}
+          items={cart.items}
+          total={cart.total}
+          count={cart.count}
+        />
       </div>
+    </div>
 
 
     </div>
