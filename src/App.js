@@ -37,8 +37,7 @@ const App = () => {
       name: "Reine",
       price: 10.50,
       picture: piz4
-
-    },
+    }
   ]);
   const [cart, setCart] = useState({
     items: [],
