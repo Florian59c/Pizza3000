@@ -7,9 +7,9 @@ import piz1 from "./img/4-fromages.jpg";
 import piz2 from "./img/marguerita.jpg";
 import piz3 from "./img/pepperoni.jpg";
 import piz4 from "./img/reine.jpg";
-import camion from "./img/truck-fast-solid.svg";
-import feu from "./img/fire-flame-curved-solid.svg";
-import euros from "./img/euro-sign-solid.svg";
+import camion from "./img/truck-fast-solid.svg.png";
+import feu from "./img/fire-flame-curved-solid.svg.png";
+import euros from "./img/euro-sign-solid.svg.png";
 import './App.css';
 import './index.css';
 import { Link } from 'react-router-dom';
@@ -168,7 +168,6 @@ const App = () => {
         />
       </div>
     </div>
-
 
     </div>
   );
