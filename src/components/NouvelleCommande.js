@@ -7,6 +7,7 @@ import piz2 from "../img/marguerita.jpg";
 import piz3 from "../img/pepperoni.jpg";
 import piz4 from "../img/reine.jpg";
 import Header from './Header';
+import { Row, Col } from 'antd';
 
 const NouvelleCommande = () => {
 
@@ -40,19 +41,24 @@ const NouvelleCommande = () => {
     items: [],
     id: Date.now(),
     total: 0,
-    count:0
+    count: 0
   })
+ 
 
   const addToCart = (pizza) => {
     const item = { ...pizza };
     // item.id = `${item.id}-${Date.now()};`
 
     setCart({
+
       items: [...cart.items, item],
       total: Math.round((cart.total + pizza.price) * 100 / 100),
       id: cart.id,
-      count:cart.count+1
+      count: cart.count + 1
+
       
+
+
     });
   }
 
@@ -69,22 +75,25 @@ const NouvelleCommande = () => {
     )
   })
   return (
-    <div>
+  <div>
       <Header />
-      <div className="App-pizza">
-      {listPizzas}
-      <div className="App-cart">
-        <Cart
-          id={cart.id}
-          items={cart.items}
-          total={cart.total}
-          count={cart.count}
-        />
+      <Row>
+        <Col span={16}> 
+        <Row gutter={10}>
+          {listPizzas}  
+          </Row>
+        </Col>
+        <Col span={8}>
+          <Cart
+            id={cart.id}
+            items={cart.items}
+            total={cart.total}
+            count={cart.count}
+          />
+        </Col>
+      </Row>
       </div>
-    </div>
-    </div>
- 
-  )
+     )
 }
 
-export default NouvelleCommande
+      export default NouvelleCommande
