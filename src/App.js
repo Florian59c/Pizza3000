@@ -1,8 +1,5 @@
 import Header from './components/Header';
 // import { useState } from 'react';
-import { useState } from 'react';
-import Pizza from './components/Pizza';
-import Cart from './components/Cart';
 import camion from "./img/truck-fast-solid.svg.png";
 import feu from "./img/fire-flame-curved-solid.svg.png";
 import euros from "./img/euro-sign-solid.svg.png";
@@ -21,7 +18,7 @@ const App = () => {
       <div className='main'>
         <div>
           <Row justify='space-between' gutter={[20, 20]}>
-            <Col span={8}>
+            <Col md={8}>
               <Link to="/nouvelle-commande">
                 <button className='button-bleu'>
                   <Row>
@@ -41,7 +38,7 @@ const App = () => {
                 </button>
               </Link>
             </Col>
-            <Col span={8}>
+            <Col md={8}>
               <Link to="/commande-en-cour">
                 <button className='button-rouge'>
                   <Row>
@@ -61,7 +58,7 @@ const App = () => {
                 </button>
               </Link>
             </Col>
-            <Col span={8}>
+            <Col md={8}>
               <Link to="/payement-commande">
                 <button className='button-vert'>
                   <Row>
@@ -89,76 +86,3 @@ const App = () => {
 }
 
 export default App;
-
-
-
-// const [pizzas, setPizzas] = useState([
-//   {
-//     id: 1,
-//     name: "4 Fromages",
-//     price: 9.80,
-//     picture: piz1
-//   },
-//   {
-//     id: 2,
-//     name: "Marguerita",
-//     price: 7.90,
-//     picture: piz2
-//   },
-//   {
-//     id: 3,
-//     name: "Pepperoni",
-//     price: 8.80,
-//     picture: piz3
-//   },
-//   {
-//     id: 4,
-//     name: "Reine",
-//     price: 10.50,
-//     picture: piz4
-//   }
-// ]);
-// const [cart, setCart] = useState({
-//   items: [],
-//   id: Date.now(),
-//   total: 0,
-//   count:0
-// })
-
-// const addToCart = (pizza) => {
-//   const item = { ...pizza };
-//   // item.id = `${item.id}-${Date.now()};`
-
-//   setCart({
-//     items: [...cart.items, item],
-//     total: Math.round((cart.total + pizza.price) * 100 / 100),
-//     id: cart.id,
-//     count:cart.count+1
-
-//   });
-// }
-
-
-// const listPizzas = pizzas.map(pizza => {
-//   return (
-//     <Pizza
-//       key={pizza.id}
-//       name={pizza.name}
-//       price={pizza.price}
-//       image={pizza.picture}
-//       action={() => addToCart(pizza)}
-//     />
-//   )
-// })
-
-{/* <div className="App-pizza">
-      {listPizzas}
-      <div className="App-cart">
-        <Cart
-          id={cart.id}
-          items={cart.items}
-          total={cart.total}
-          count={cart.count}
-        />
-      </div>
-</div>*/}

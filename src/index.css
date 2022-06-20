@@ -24,6 +24,10 @@ code {
     monospace;
 }
 
+h1, h2 {
+  font-weight: bold;
+}
+
 /* header */
 
 .header {
@@ -99,7 +103,6 @@ code {
   font-size: 3rem;
 }
 
-
 /* nouvelle commande */
 
 .App-pizza{
@@ -113,3 +116,64 @@ code {
   font-size: 3rem;
 }
 
+
+
+
+/* commande en cour */
+
+.enCours {
+  background-color: rgb(241, 241, 241);
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.enCours table {
+  width: 100%;
+}
+
+.enCours .celulle1 {
+  width: 40%;
+}
+
+.enCours .celulle2 {
+  width: 20%;
+}
+
+.enCours .celulle3 {
+  width: 25%;
+}
+
+.enCours .celulle4 {
+  width: 15%;
+}
+
+.enCours th {
+  border-bottom: 0.3rem solid black;
+  text-align: left;
+}
+
+.enCours td {
+  background-color: rgb(241, 241, 241);
+}
+
+.enCours img {
+  width: 50%;
+  height: 90%;
+  padding: 1rem;
+}
+
+/* Payment de commande */
+
+.payementContainer {
+  background-color: rgb(197, 197, 197);
+  padding: 2rem;
+}
+
+.payementContainer select {
+  margin-bottom: 2rem;
+}
+
+.payementContainer div {
+  background-color: rgb(241, 241, 241);
+  padding: 1rem;
+}

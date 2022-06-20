@@ -18,7 +18,7 @@ const Cart = ({items,total,id,count}) => {
             {cartItems} 
             <h4>Commande en n°{id}</h4>
             <h5>{count}</h5>
-           <h6>Soit un total de {total}$</h6> 
+           <h6>Soit un total de {total}$</h6>
         </div>
     </div>
   )
