@@ -115,6 +115,26 @@ h1, h2 {
   background-color: rgba(0, 0, 255, 0.305);
   font-size: 3rem;
 }
+.pizza-list img{
+ width: 100%;
+}
+.pname{
+  text-align: center;
+  background-color: rgb(161, 161, 161);
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+.App-cart-total{
+  background-color: white;
+}
+.App-cart-total Button{
+  background-color: green;
+ align-content: center;
+ 
+}
+.center{
+  text-align: center;
+}
 
 
 
